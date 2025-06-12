@@ -73,9 +73,8 @@ const MessageView = ({ messages, toggleShowMessages, setMessages }: {
     <div
       className="fixed inset-0 z-50 bg-black/70 bg-opacity-50 flex justify-center pt-20"
       role="button"
-      data-aos="fade-down"
     >
-      <div className="bg-base-300 rounded-lg shadow-2xl w-[95%] max-w-2xl max-h-[80vh] flex flex-col">
+      <div className="bg-base-300 rounded-lg shadow-2xl w-[95%] max-w-2xl max-h-[80vh] flex flex-col" data-aos="fade-down">
         <div className="p-4 border-b border-gray-200 bg-blue-600 rounded-t-lg flex items-center">
           <div className="me-auto">
             <h2 className="text-2xl font-bold text-white">Messages</h2>
