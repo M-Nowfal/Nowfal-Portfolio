@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Byte-Cart E-Commerce Platform",
+    "description": "A full-featured e-commerce site using Next.js and MongoDB. Supports authentication, product management, and cart functions. Covers 50% of Amazon’s core features, with server-side rendering for performance and SEO.",
+    "url": "http://byte-cart.vercel.app/",
+    "category": "Advanced",
+    "tech": [
+      "Next.js",
+      "MongoDB",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "title": "Pick & Go",
+    "description": "A mini e-commerce app built with the MERN stack. Features user login, product details, cart, order management, and a seller dashboard with MongoDB integration for smooth user experience.",
+    "url": "https://pick-and-go-lovat.vercel.app/",
+    "category": "Advanced",
+    "tech": [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "MERN"
+    ]
+  },
+  {
+    "title": "Housing Unit Bill Record",
+    "description": "A web app to manage water bill payments for multiple apartment buildings. Tracks payments month-wise for 2025, enabling organized billing and monitoring for each unit.",
+    "url": "https://housing-unit-bill-record.vercel.app/",
+    "category": "Intermediate",
+    "tech": [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "jwt",
+      "MERN"
+    ]
+  },
+  {
+    "title": "ToDo App",
+    "description": "A task management tool with features like categorization, due dates, and completion tracking. Responsive design ensures usability across devices.",
+    "url": "https://to-do-app-kappa-pearl.vercel.app/",
+    "category": "Intermediate",
+    "tech": [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB"
+    ]
+  },
+  {
+    "title": "Calculator",
+    "description": "A basic calculator for arithmetic operations with a responsive UI. Built using HTML, CSS, and JavaScript for efficient and quick calculations.",
+    "url": "https://nowfal86.neocities.org/Nowfal/Calculator/",
+    "category": "Basic",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ]
+  },
+  {
+    "title": "Tic Tac Toe",
+    "description": "A 1- or 2-player Tic-Tac-Toe game with a score tracker. Players place 'X' or 'O' on a 3x3 grid. Built with HTML, CSS, and JavaScript for an interactive experience.",
+    "url": "https://nowfal86.neocities.org/Nowfal/Tic-Tac-Toe/",
+    "category": "Basic",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ]
+  },
+  {
+    "title": "Banking App",
+    "description": "Simulates basic banking functions like account creation, deposit, withdrawal, balance check, and closure. Built with HTML, CSS, and JavaScript, storing data in the browser.",
+    "url": "https://nowfal86.neocities.org/Nowfal/Bank/",
+    "category": "Basic",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap"
+    ]
+  }
+]

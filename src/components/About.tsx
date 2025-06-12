@@ -1,0 +1,86 @@
+// import { Mail, MapPin, Phone } from "lucide-react";
+import { Code, Database, Globe, Terminal, Cpu } from "lucide-react";
+import React from "react";
+
+const About: React.FC = () => {
+  return (
+    <div className="text-center py-20 bg-base-300" id="about-me">
+      <section id="about" className="px-4 max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-8  text-blue-500" data-aos="fade-left">
+          About Me
+        </h2>
+
+        <div className="bg-base-100 rounded-xl p-8 shadow-2xl" data-aos="fade-right">
+          <p className="text-lg leading-relaxed mb-6">
+            Hello! I&apos;m <span className="font-semibol">Muhammed Nowfal</span>,
+            a passionate Computer Science student pursuing my B.Sc. at Government Arts College, Coimbatore.
+            I specialize in building modern web applications and solving complex problems through code.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-blue-900/50 rounded-full">
+                <Code className="text-blue-600" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg mb-2">Full-Stack Development</h3>
+                <p>
+                  Currently building applications with React, Next.js, Express, and MongoDB
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-purple-900/50 rounded-full">
+                <Database className="text-purple-600" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg mb-2">Database Expertise</h3>
+                <p>
+                  Strong knowledge in database design and management systems
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-green-900/50 rounded-full">
+                <Terminal className="text-green-600" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg mb-2">Programming</h3>
+                <p>
+                  Experience with JavaScript, Java, Python and problem-solving
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-orange-900/50 rounded-full">
+                <Globe className="text-orange-600" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg mb-2">Web Development</h3>
+                <p>
+                  Built E-Commerce websites and applications with modern frameworks
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-blue-50/50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-900/30">
+            <h3 className="font-semibold text-xl mb-3 flex items-center gap-2 text-blue-700 dark:text-blue-400">
+              <Cpu className="inline" /> Current Focus
+            </h3>
+            <p>
+              I&apos;m currently enhancing my skills in full-stack development while working towards building
+              a complete e-commerce solution. When I&apos;m not coding, I enjoy exploring tech trends,
+              collaborating with peers, and continuously expanding my knowledge in this ever-evolving field.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default About;
