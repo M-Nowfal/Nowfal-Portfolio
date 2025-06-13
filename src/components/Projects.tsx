@@ -47,6 +47,7 @@ const Projects: React.FC = () => {
 
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<<<<<<< HEAD
           {filterProjects.map((project, idx) => (
             <div key={project.title} data-aos={idx < 3 || idx > 5 ? "fade-right" : "fade-left"}>
               <div className="group relative bg-base-200 backdrop-blur-md rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 h-96">
@@ -54,6 +55,17 @@ const Projects: React.FC = () => {
 
                 <div className="h-full flex flex-col">
                   <div className="p-6 flex-grow flex flex-col cursor-pointer" onClick={() => toggleExpand(project.title)}>
+=======
+          {filterProjects.map((project) => (
+            <div key={project.title} data-aos="fade-right">
+              <div
+                className="group relative bg-base-200 backdrop-blur-md rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 h-96"
+              >
+                <div className={`absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 ${expandedProject === project.title && "opacity-100"} transition-opacity duration-500`}></div>
+
+                <div className="h-full flex flex-col" role="button" onClick={() => toggleExpand(project.title)}>
+                  <div className="p-6 flex-grow flex flex-col">
+>>>>>>> 4e12776f3e44f31486ed8e6521d9ccca643e443b
                     <h3 className="text-xl font-bold mb-3 w-fit px-3 py-1 shadow-lg rounded-4xl transition-all duration-300 group-hover:text-blue-600">
                       {project.category}
                     </h3>
