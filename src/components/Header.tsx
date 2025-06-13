@@ -13,7 +13,7 @@ const Header = ({ toggleShowMessages, messages, setMessages }: {
 
   const { theme, toggleTheme } = useContext(ThemeContext);
   const { admin } = useContext(AuthContext);
-  const { regetMessage, setRegetMessage } = useContext(AdminContext);
+  const { regetMessage, toggleRegetMessage } = useContext(AdminContext);
 
   const getMessages = useCallback(async () => {
     try {
@@ -23,9 +23,9 @@ const Header = ({ toggleShowMessages, messages, setMessages }: {
       const error = err instanceof AxiosError ? err.response?.data.message : String(err);
       console.log(error);
     } finally {
-      setRegetMessage(false);
+      toggleRegetMessage();
     }
-  }, [setMessages, regetMessage]);
+  }, [setMessages, regetMessage, toggleRegetMessage]);
 
   useEffect(() => {
     if (admin) {

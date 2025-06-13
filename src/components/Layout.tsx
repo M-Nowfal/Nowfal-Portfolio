@@ -18,7 +18,7 @@ export const AuthContext = createContext({
 
 export const AdminContext = createContext({
   regetMessage: false,
-  setRegetMessage: (value: boolean | ((prev: boolean) => boolean)) => { }
+  toggleRegetMessage: () => { }
 });
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -59,10 +59,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     setShowMessages((prev: boolean) => !prev)
   };
 
+  const toggleRegetMessage = () => {
+    setRegetMessage((prev: boolean) => !prev);
+  };
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <AuthContext.Provider value={{ admin, toggleAdmin }}>
-        <AdminContext.Provider value={{ regetMessage, setRegetMessage }}>
+        <AdminContext.Provider value={{ regetMessage, toggleRegetMessage }}>
           <Header
             toggleShowMessages={toggleShowMessages}
             messages={messages}

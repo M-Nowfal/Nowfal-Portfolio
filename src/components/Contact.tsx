@@ -8,7 +8,7 @@ import { AdminContext, AuthContext } from './Layout';
 const Contact: React.FC = () => {
 
   const { admin } = useContext(AuthContext);
-  const { setRegetMessage } = useContext(AdminContext);
+  const { toggleRegetMessage } = useContext(AdminContext);
   const [inputs, setInputs] = useState({
     name: "", email: "", msg: ""
   });
@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
       const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/messages`, inputs);
       setResult({ success: true, msg: response.data.message });
       if (admin) {
-        setRegetMessage(true);
+        toggleRegetMessage();
       }
       setInputs({
         name: "", email: "", msg: ""
