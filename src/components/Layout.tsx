@@ -4,6 +4,7 @@ import React, { createContext, useEffect, useState } from 'react'
 import Header from './Header';
 import Footer from './Footer';
 import MessageView from './MessageView';
+import { MessageType } from '@/utils/Types';
 
 export const ThemeContext = createContext({
   theme: "dark",
@@ -12,16 +13,13 @@ export const ThemeContext = createContext({
 
 export const AuthContext = createContext({
   admin: false,
-  toggleAdmin: () => { }
+  toggleAdmin: () => { },
 });
 
-type MessageType = {
-  _id: string;
-  name: string;
-  email: string;
-  msg: string;
-  createdAt: string;
-};
+export const AdminContext = createContext({
+  regetMessage: false,
+  setRegetMessage: (value: boolean | ((prev: boolean) => boolean)) => { }
+});
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
 
@@ -29,6 +27,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const [admin, setAdmin] = useState<boolean>(false);
   const [messages, setMessages] = useState<MessageType[]>([]);
   const [showMessages, setShowMessages] = useState<boolean>(false);
+  const [regetMessage, setRegetMessage] = useState<boolean>(false);
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
@@ -63,17 +62,19 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <AuthContext.Provider value={{ admin, toggleAdmin }}>
-        <Header
-          toggleShowMessages={toggleShowMessages}
-          messages={messages}
-          setMessages={setMessages}
-        />
-        {showMessages && <MessageView
-          messages={messages}
-          toggleShowMessages={toggleShowMessages}
-          setMessages={setMessages}
-        />}
-        {children}
+        <AdminContext.Provider value={{ regetMessage, setRegetMessage }}>
+          <Header
+            toggleShowMessages={toggleShowMessages}
+            messages={messages}
+            setMessages={setMessages}
+          />
+          {showMessages && <MessageView
+            messages={messages}
+            toggleShowMessages={toggleShowMessages}
+            setMessages={setMessages}
+          />}
+          {children}
+        </AdminContext.Provider>
       </AuthContext.Provider>
       <Footer />
     </ThemeContext.Provider>

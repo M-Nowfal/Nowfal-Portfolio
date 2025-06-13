@@ -1,16 +1,9 @@
 import { Code, Contact, FolderOpen, Home, User } from "lucide-react";
 import Link from "next/link";
 import React, { useCallback, useContext, useEffect } from "react";
-import { AuthContext, ThemeContext } from "./Layout";
+import { AdminContext, AuthContext, ThemeContext } from "./Layout";
 import axios, { AxiosError } from "axios";
-
-type MessageType = {
-  _id: string;
-  name: string;
-  email: string;
-  msg: string;
-  createdAt: string;
-};
+import { MessageType } from "@/utils/Types";
 
 const Header = ({ toggleShowMessages, messages, setMessages }: {
   toggleShowMessages: () => void,
@@ -20,6 +13,7 @@ const Header = ({ toggleShowMessages, messages, setMessages }: {
 
   const { theme, toggleTheme } = useContext(ThemeContext);
   const { admin } = useContext(AuthContext);
+  const { regetMessage, setRegetMessage } = useContext(AdminContext);
 
   const getMessages = useCallback(async () => {
     try {
@@ -28,8 +22,10 @@ const Header = ({ toggleShowMessages, messages, setMessages }: {
     } catch (err: unknown) {
       const error = err instanceof AxiosError ? err.response?.data.message : String(err);
       console.log(error);
+    } finally {
+      setRegetMessage(false);
     }
-  }, [setMessages]);
+  }, [setMessages, regetMessage]);
 
   useEffect(() => {
     if (admin) {

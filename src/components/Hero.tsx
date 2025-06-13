@@ -6,7 +6,7 @@ import Typewriter from 'typewriter-effect';
 
 const Hero: React.FC = () => {
   return (
-    <div className="hero bg-base-200 pt-25 lg:h-screen lg:pt-0" id="hero">
+    <div className="hero bg-base-200/50 pt-25 lg:h-screen lg:pt-0" id="hero">
       <div className="hero-content gap-20 flex-col lg:flex-row-reverse">
         <Image
           width={1000}

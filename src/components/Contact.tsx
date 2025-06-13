@@ -2,10 +2,13 @@
 
 import axios, { AxiosError } from 'axios';
 import { Mail, MapPin, Phone } from 'lucide-react';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { AdminContext, AuthContext } from './Layout';
 
 const Contact: React.FC = () => {
 
+  const { admin } = useContext(AuthContext);
+  const { setRegetMessage } = useContext(AdminContext);
   const [inputs, setInputs] = useState({
     name: "", email: "", msg: ""
   });
@@ -29,6 +32,9 @@ const Contact: React.FC = () => {
       setResult({ success: false, msg: "" });
       const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/messages`, inputs);
       setResult({ success: true, msg: response.data.message });
+      if (admin) {
+        setRegetMessage(true);
+      }
       setInputs({
         name: "", email: "", msg: ""
       });
@@ -54,7 +60,7 @@ const Contact: React.FC = () => {
         Get in touch
       </h1>
       <div className="flex flex-col lg:flex-row gap-15 lg:gap-30 justify-center">
-        <div className="flex flex-col gap-4 items-center font-bold lg:pt-15" data-aos="fade-down">
+        <div className="flex flex-col gap-4 items-center font-bold lg:pt-15" data-aos="fade-right">
           <div className="flex gap-3">
             <MapPin className="text-blue-500" />
             Coimbatore
@@ -69,7 +75,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        <form className="flex flex-col gap-5 w-100" onSubmit={handleSubmit} data-aos="fade-up">
+        <form className="flex flex-col gap-5 w-100" onSubmit={handleSubmit} data-aos="fade-left">
           <input
             type="text"
             name="name"

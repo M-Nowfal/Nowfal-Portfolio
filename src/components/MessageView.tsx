@@ -1,14 +1,7 @@
+import { MessageType } from '@/utils/Types';
 import axios, { AxiosError } from 'axios';
 import { Send, X } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
-
-type MessageType = {
-  _id: string,
-  name: string,
-  email: string,
-  msg: string,
-  createdAt: string
-};
 
 const MessageView = ({ messages, toggleShowMessages, setMessages }: {
   messages: Array<MessageType>,
