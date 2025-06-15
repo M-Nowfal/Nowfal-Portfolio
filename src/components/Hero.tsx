@@ -37,7 +37,13 @@ const Hero: React.FC = () => {
               />
             </h2>
           </div>
-          <button className="btn bg-blue-500 text-black font-bold text-lg py-6" suppressHydrationWarning>Download CV</button>
+          <button
+            className="btn bg-blue-500 text-black font-bold text-lg py-6"
+            onClick={() => {
+              window.open("resume/Nowfal Resume.pdf", "_blank");
+            }}
+            suppressHydrationWarning
+          >Download CV</button>
         </div>
       </div>
     </div>
