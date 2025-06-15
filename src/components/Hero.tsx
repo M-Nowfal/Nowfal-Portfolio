@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
             </h2>
           </div>
           <button
-            className="btn bg-blue-500 text-black font-bold text-lg py-6"
+            className="btn bg-blue-500 text-white font-bold text-lg py-6"
             onClick={() => {
               window.open("resume/Nowfal Resume.pdf", "_blank");
             }}
