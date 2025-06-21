@@ -13,7 +13,7 @@ const Header = ({ toggleShowMessages, messages, setMessages }: {
 
   const { theme, toggleTheme } = useContext(ThemeContext);
   const { admin } = useContext(AuthContext);
-  const { regetMessage, toggleRegetMessage } = useContext(AdminContext);
+  const { regetMessage } = useContext(AdminContext);
 
   const getMessages = useCallback(async () => {
     try {
@@ -22,16 +22,14 @@ const Header = ({ toggleShowMessages, messages, setMessages }: {
     } catch (err: unknown) {
       const error = err instanceof AxiosError ? err.response?.data.message : String(err);
       console.log(error);
-    } finally {
-      toggleRegetMessage();
     }
-  }, [setMessages, regetMessage, toggleRegetMessage]);
+  }, [setMessages]);
 
   useEffect(() => {
     if (admin) {
       getMessages();
     }
-  }, [admin, getMessages]);
+  }, [admin, getMessages, regetMessage]);
 
   const menuStyle: string = "font-semibold hover:ps-5 hover:text-blue-500 transition-all duration-300 my-1 py-1";
   const largeMenuStyle: string = "flex items-center gap-1 font-semibold p-2 rounded-xl hover:text-blue-500 transition-all duration-200 transform hover:-translate-y-2";

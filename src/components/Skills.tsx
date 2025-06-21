@@ -31,7 +31,7 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen text-center pb-20 bg-base-200 pt-10" id="skills">
+    <div className="text-center pb-20 bg-base-200 pt-10" id="skills">
       <h1 className="text-4xl font-bold text-blue-500 py-10" data-aos="fade-right">Skills</h1>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-5 lg:px-30">
         {skills.map(skill => (
