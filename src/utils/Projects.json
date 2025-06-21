@@ -50,6 +50,17 @@
     ]
   },
   {
+    "title": "Rock Paper Scissor",
+    "description": "A basic rock paper scissor game developed by using react and tailwindcss with motion-frame.",
+    "url": "https://rock-paper-scissor-omega-blond.vercel.app/",
+    "category": "Basic",
+    "tech": [
+      "React",
+      "Tailwind CSS",
+      "motion-frame"
+    ]
+  },
+  {
     "title": "Calculator",
     "description": "A basic calculator for arithmetic operations with a responsive UI. Built using HTML, CSS, and JavaScript for efficient and quick calculations.",
     "url": "https://nowfal86.neocities.org/Nowfal/Calculator/",
