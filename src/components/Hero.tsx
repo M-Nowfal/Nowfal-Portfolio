@@ -3,25 +3,35 @@
 import Image from "next/image";
 import React from "react";
 import Typewriter from 'typewriter-effect';
+import { motion } from "framer-motion";
 
 const Hero: React.FC = () => {
   return (
-    <div className="hero bg-base-200/50 pt-25 lg:h-screen lg:pt-0" id="hero">
+    <div className="hero pt-20" id="hero">
       <div className="hero-content gap-20 flex-col lg:flex-row-reverse">
-        <Image
-          width={1000}
-          height={1000}
-          priority
-          src="/portfolio_images/Nowfal.png"
-          className="max-w-sm rounded-full object-cover object-top shadow-2xl h-100 w-100"
-          alt="Nowfal Portfolio"
-          data-aos="fade-left"
-        />
-        <div data-aos="fade-right">
-          <h1 className="text-5xl font-bold">Muhammed Nowfal</h1>
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <Image
+            width={1000}
+            height={1000}
+            priority
+            src="/portfolio_images/Nowfal.png"
+            className="max-w-xs sm:max-w-sm rounded-full object-cover object-top shadow-2xl md:h-100 md:w-100 hover:shadow-lg hover:shadow-blue-400 transition-all duration-200"
+            alt="Nowfal Portfolio"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+        >
+          <h1 className="text-3xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-500 to-purple-600">Muhammed Nowfal</h1>
           <div className="flex gap-3 items-center my-2">
-            <span className="text-3xl font-bold">I&apos;m a</span>
-            <h2 className="font-bold text-3xl my-2 text-blue-500">
+            <span className="text-xl sm:text-3xl font-bold">I&apos;m a</span>
+            <h2 className="font-bold text-xl sm:text-3xl my-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-blue-500 to-emerald-500">
               <Typewriter
                 options={{
                   strings: [
@@ -37,14 +47,19 @@ const Hero: React.FC = () => {
               />
             </h2>
           </div>
-          <button
-            className="btn bg-blue-500 text-white font-bold text-lg py-6"
+          <motion.button
+            className="btn bg-blue-500 text-white font-semibold md:font-bold text-lg py-5 btn-sm md:btn-md"
             onClick={() => {
               window.open("resume/Nowfal Resume.pdf", "_blank");
             }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.05 }}
             suppressHydrationWarning
-          >Download CV</button>
-        </div>
+          >Resume
+          </motion.button>
+        </motion.div>
       </div>
     </div>
   );

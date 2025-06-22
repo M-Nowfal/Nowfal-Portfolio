@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center py-10 bg-base-300" id="contact">
-      <h1 className="text-4xl font-bold text-blue-500 py-10 mb-5 text-center" data-aos="fade-right">
+      <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-purple-600 py-10 mb-5 text-center" data-aos="fade-right">
         Get in touch
       </h1>
       <div className="flex flex-col lg:flex-row gap-15 lg:gap-30 justify-center">

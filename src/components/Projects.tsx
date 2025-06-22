@@ -24,7 +24,7 @@ const Projects: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center py-10 bg-base-300" id="projects">
-      <h1 className="text-4xl font-bold text-blue-500 py-10 mb-5 text-center" data-aos="fade-down">
+      <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-purple-600 py-10 mb-5 text-center" data-aos="fade-down">
         My Projects
       </h1>
 

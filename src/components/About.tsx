@@ -1,15 +1,22 @@
+"use client";
+
 import { Code, Database, Globe, Terminal, Cpu } from "lucide-react";
 import React from "react";
+import { motion } from "framer-motion";
 
 const About: React.FC = () => {
   return (
-    <div className="text-center py-20 bg-base-300" id="about-me">
+    <div className="text-center py-20" id="about-me">
       <section id="about" className="px-4 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8  text-blue-500" data-aos="fade-left">
+        <motion.h2 
+          className="text-3xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-purple-600" 
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+        >
           About Me
-        </h2>
+        </motion.h2>
 
-        <div className="bg-base-100 rounded-xl p-8 shadow-2xl" data-aos="fade-right">
+        <div className="bg-base-100 rounded-xl p-8 shadow-2xl" >
           <p className="text-lg leading-relaxed mb-6" data-aos="fade-left">
             Hello! I&apos;m <span className="font-semibol">Muhammed Nowfal</span>,
             a passionate Computer Science student pursuing my B.Sc. at Government Arts College, Coimbatore.
@@ -17,7 +24,7 @@ const About: React.FC = () => {
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="flex items-start gap-4" data-aos="fade-left">
+            <div className="flex items-start gap-4" data-aos="fade-right">
               <div className="p-3 bg-blue-900/50 rounded-full">
                 <Code className="text-blue-600" />
               </div>
@@ -41,7 +48,7 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-4" data-aos="fade-left">
+            <div className="flex items-start gap-4" data-aos="fade-right">
               <div className="p-3 bg-green-900/50 rounded-full">
                 <Terminal className="text-green-600" />
               </div>
@@ -66,7 +73,7 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-blue-900/20 p-6 rounded-lg border border-blue-200 shadow-xl" data-aos="fade-left">
+          <div className="bg-blue-900/20 p-6 rounded-lg border border-blue-200 shadow-xl" data-aos="fade-right">
             <h3 className="font-semibold text-xl mb-3 flex items-center gap-2 text-blue-700">
               <Cpu className="inline" /> Current Focus
             </h3>

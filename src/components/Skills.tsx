@@ -32,8 +32,8 @@ const Skills: React.FC = () => {
 
   return (
     <div className="text-center pb-20 bg-base-200 pt-10" id="skills">
-      <h1 className="text-4xl font-bold text-blue-500 py-10" data-aos="fade-right">Skills</h1>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-5 lg:px-30">
+      <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-purple-600 py-10" data-aos="fade-right">Skills</h1>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 lg:px-30">
         {skills.map(skill => (
           <div key={skill.name} data-aos="fade-up">
             <Link
@@ -54,7 +54,7 @@ const Skills: React.FC = () => {
         ))}
       </div>
       <div className="mt-10">
-        <h1 className="text-blue-400 text-2xl font-bold my-5" data-aos="fade-left">Also familiar with</h1>
+        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-400 to-purple-500 text-2xl font-bold my-5" data-aos="fade-left">Also familiar with</h1>
         <div className="flex justify-center mt-10">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
             {familiarWithSkills.map(familiarSkill => (

@@ -7,11 +7,11 @@ import 'aos/dist/aos.css';
 const AOSInitializer = () => {
   useEffect(() => {
     AOS.init({
-      duration: 500,
+      duration: 350,
       easing: 'ease-in-out',
-      once: false,
+      once: true,
       mirror: false,
-      offset: 200,
+      offset: 100,
     });
   }, []);
 
