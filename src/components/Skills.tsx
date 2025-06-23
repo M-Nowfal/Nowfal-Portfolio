@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
-  // Organized skills by category
   const skillCategories = [
     {
       name: "Frontend",
@@ -49,7 +48,7 @@ const Skills = () => {
 
   return (
     <div className="text-center pb-20 pt-10 px-4 sm:px-6 lg:px-8" id="skills">
-      <motion.h1 
+      <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -65,7 +64,7 @@ const Skills = () => {
             <h2 className="md:flex md:ms-15 text-2xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
               {category.name}
             </h2>
-            
+
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6" >
               {category.skills.map((skill) => (
                 <div
@@ -74,11 +73,16 @@ const Skills = () => {
                   data-aos="fade-up"
                 >
                   <Link href={skill.url} target="_blank" className="group">
-                    <div className="p-4 bg-gradient-to-br from-blue-500/10 to-purple-500/10  backdrop-blur-sm rounded-xl hover:scale-110 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:bg-white/10">
+                    <div
+                      className="p-4 bg-gradient-to-br from-blue-500/10 to-purple-500/10  backdrop-blur-sm rounded-xl hover:scale-110 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:bg-white/10"
+                      role="button"
+                      onClick={() => navigator.vibrate(50)}
+                    >
                       <div className="relative w-10 h-10 md:w-16 md:h-16 mx-auto">
                         <Image
                           src={skill.img}
-                          fill
+                          width={500}
+                          height={500}
                           alt={skill.name}
                           className="object-contain"
                         />
@@ -100,7 +104,7 @@ const Skills = () => {
         <h2 className="text-2xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-400 to-purple-500" >
           Also Familiar With
         </h2>
-        
+
         <div
           className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto"
         >
@@ -108,12 +112,16 @@ const Skills = () => {
             <div
               key={skill.name}
               className="px-6 py-3 bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-full shadow hover:scale-105 hover:bg-white/10 transition-all duration-300"
+              data-aos="fade-up"
+              role="button"
+              onClick={() => navigator.vibrate(50)}
             >
               <Link href={skill.url} target="_blank" className="flex items-center gap-2">
                 <div className="relative w-6 h-6">
                   <Image
                     src={skill.img}
-                    fill
+                    width={300}
+                    height={300}
                     alt={skill.name}
                     className="object-contain"
                   />

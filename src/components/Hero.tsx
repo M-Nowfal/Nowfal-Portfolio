@@ -50,6 +50,7 @@ const Hero: React.FC = () => {
           <motion.button
             className="btn bg-gradient-to-r  from-purple-400 to-blue-400 text-white font-semibold md:font-bold text-lg py-5 btn-sm md:btn-md"
             onClick={() => {
+              navigator.vibrate(50);
               window.open("resume/Nowfal Resume.pdf", "_blank");
             }}
             initial={{ opacity: 0 }}

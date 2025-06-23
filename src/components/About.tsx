@@ -8,7 +8,7 @@ const About: React.FC = () => {
   return (
     <div className="py-20 px-4 sm:px-6 lg:px-8" id="about-me">
       <section id="about" className="max-w-6xl mx-auto">
-        <motion.h2 
+        <motion.h2
           className="text-4xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-purple-600"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -21,7 +21,11 @@ const About: React.FC = () => {
           {/* Left Column */}
           <div className="space-y-8" >
             {/* Summary Card */}
-            <motion.div whileHover={{ scale: 1.03 }} className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-200 border border-gray-400/50 backdrop-blur-sm">
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-200 border border-gray-400/50 backdrop-blur-sm"
+              data-aos="fade-right"
+            >
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-blue-500/20 rounded-full">
                   <BookOpen className="text-blue-400" size={24} />
@@ -40,7 +44,7 @@ const About: React.FC = () => {
             </motion.div>
 
             {/* Education Card */}
-            <motion.div whileHover={{ scale: 1.03 }} className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-200 border border-gray-400/50 backdrop-blur-sm" >
+            <motion.div whileHover={{ scale: 1.03 }} className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-200 border border-gray-400/50 backdrop-blur-sm" data-aos="fade-right">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-purple-500/20 rounded-full">
                   <GraduationCap className="text-purple-400" size={24} />
@@ -69,7 +73,7 @@ const About: React.FC = () => {
           {/* Right Column */}
           <div className="space-y-8" >
             {/* Skills Highlights */}
-            <motion.div whileHover={{ scale: 1.03 }} className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-200 border border-gray-400/50 backdrop-blur-sm" >
+            <motion.div whileHover={{ scale: 1.03 }} className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-200 border border-gray-400/50 backdrop-blur-sm" data-aos="fade-left">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-green-500/20 rounded-full">
                   <Lightbulb className="text-green-400" size={24} />
@@ -121,7 +125,7 @@ const About: React.FC = () => {
             </motion.div>
 
             {/* Current Focus */}
-            <motion.div whileHover={{ scale: 1.03 }} className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-200 border border-gray-400/50 backdrop-blur-sm" >
+            <motion.div whileHover={{ scale: 1.03 }} className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-200 border border-gray-400/50 backdrop-blur-sm" data-aos="fade-left">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-orange-500/20 rounded-full">
                   <Cpu className="text-orange-400" size={24} />

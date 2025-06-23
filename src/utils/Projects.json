@@ -1,8 +1,9 @@
 [
   {
-    "title": "Byte-Cart E-Commerce Platform",
-    "description": "A full-featured e-commerce site using Next.js and MongoDB. Supports authentication, product management, and cart functions. Covers 50% of Amazon’s core features, with server-side rendering for performance and SEO.",
+    "title": "Byte-Cart",
+    "description": "A full-featured e-commerce site using Next.js and MongoDB. Supports authentication and cart functions. Covers 50% of Amazon's core features, with server-side rendering for performance and SEO.",
     "url": "http://byte-cart.vercel.app/",
+    "image": "/project_images/byte_cart.png",
     "category": "Advanced",
     "tech": [
       "Next.js",
@@ -14,26 +15,13 @@
     "title": "Pick & Go",
     "description": "A mini e-commerce app built with the MERN stack. Features user login, product details, cart, order management, and a seller dashboard with MongoDB integration for smooth user experience.",
     "url": "https://pick-and-go-lovat.vercel.app/",
-    "category": "Advanced",
-    "tech": [
-      "React",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "MERN"
-    ]
-  },
-  {
-    "title": "Housing Unit Bill Record",
-    "description": "A web app to manage water bill payments for multiple apartment buildings. Tracks payments month-wise for 2025, enabling organized billing and monitoring for each unit.",
-    "url": "https://housing-unit-bill-record.vercel.app/",
+    "image": "/project_images/pick_and_go.png",
     "category": "Intermediate",
     "tech": [
       "React",
       "Node.js",
       "Express.js",
       "MongoDB",
-      "jwt",
       "MERN"
     ]
   },
@@ -41,6 +29,7 @@
     "title": "ToDo App",
     "description": "A task management tool with features like categorization, due dates, and completion tracking. Responsive design ensures usability across devices.",
     "url": "https://to-do-app-kappa-pearl.vercel.app/",
+    "image": "/project_images/to_do_app.png",
     "category": "Intermediate",
     "tech": [
       "React",
@@ -53,6 +42,7 @@
     "title": "Rock Paper Scissor",
     "description": "A basic rock paper scissor game developed by using react and tailwindcss with motion-frame.",
     "url": "https://rock-paper-scissor-omega-blond.vercel.app/",
+    "image": "/project_images/rock_paper_scissor.png",
     "category": "Basic",
     "tech": [
       "React",
@@ -64,6 +54,7 @@
     "title": "Calculator",
     "description": "A basic calculator for arithmetic operations with a responsive UI. Built using HTML, CSS, and JavaScript for efficient and quick calculations.",
     "url": "https://nowfal86.neocities.org/Nowfal/Calculator/",
+    "image": "/project_images/calculator.png",
     "category": "Basic",
     "tech": [
       "HTML",
@@ -75,6 +66,7 @@
     "title": "Tic Tac Toe",
     "description": "A 1- or 2-player Tic-Tac-Toe game with a score tracker. Players place 'X' or 'O' on a 3x3 grid. Built with HTML, CSS, and JavaScript for an interactive experience.",
     "url": "https://nowfal86.neocities.org/Nowfal/Tic-Tac-Toe/",
+    "image": "/project_images/xo.png",
     "category": "Basic",
     "tech": [
       "HTML",
@@ -86,6 +78,7 @@
     "title": "Banking App",
     "description": "Simulates basic banking functions like account creation, deposit, withdrawal, balance check, and closure. Built with HTML, CSS, and JavaScript, storing data in the browser.",
     "url": "https://nowfal86.neocities.org/Nowfal/Bank/",
+    "image": "/project_images/bank_app.png",
     "category": "Basic",
     "tech": [
       "HTML",

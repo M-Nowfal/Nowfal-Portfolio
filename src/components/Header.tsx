@@ -48,9 +48,9 @@ const Header = ({ toggleShowMessages, messages, setMessages }: {
 
   return (
     <div className="navbar bg-gradient-to-br from-blue-500/10 to-purple-500/10 shadow-md rounded-b-xl backdrop-blur-lg z-10 fixed" data-aos="fade-down">
-      <div className="navbar-start md:hidden">
+      <div className="navbar-start md:hidden" onClick={vibrate}>
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn border-0 bg-transparent btn-circle shadow-none" onClick={vibrate} suppressHydrationWarning>
+          <div tabIndex={0} role="button" className="btn border-0 bg-transparent btn-circle shadow-none" suppressHydrationWarning>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"

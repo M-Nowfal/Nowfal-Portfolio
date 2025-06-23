@@ -18,15 +18,17 @@ const Footer: React.FC = () => {
       <nav>
         <div className="flex items-center gap-4">
           {connectWithMe.map((option, index) => (
-            <Link key={index} href={option.url} target="_blank">
-              <Image
-                src={option.icon}
-                width={500}
-                height={500}
-                alt="img"
-                className="w-8"
-              />
-            </Link>
+            <div key={index} role="button" onClick={() => navigator.vibrate(50)}>
+              <Link href={option.url} target="_blank">
+                <Image
+                  src={option.icon}
+                  width={500}
+                  height={500}
+                  alt="img"
+                  className="w-8"
+                />
+              </Link>
+            </div>
           ))}
         </div>
       </nav>

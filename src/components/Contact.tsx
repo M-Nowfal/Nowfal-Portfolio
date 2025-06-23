@@ -62,15 +62,15 @@ const Contact: React.FC = () => {
       <div className="flex flex-col lg:flex-row gap-15 lg:gap-30 justify-center">
         <div className="flex flex-col gap-4 items-center font-bold lg:pt-15" data-aos="fade-right">
           <div className="flex gap-3">
-            <MapPin className="text-blue-500" />
+            <MapPin className="text-blue-500/60" />
             Coimbatore
           </div>
           <div className="flex gap-3">
-            <Mail className="text-blue-500" />
+            <Mail className="text-purple-500/60" />
             nowfalmmuhammed@gmail.com
           </div>
           <div className="flex gap-3">
-            <Phone className="text-blue-500" />
+            <Phone className="text-blue-500/60" />
             +91 8610297319
           </div>
         </div>
@@ -110,6 +110,7 @@ const Contact: React.FC = () => {
           <div className="flex flex-col items-center my-3">
             <button
               className="btn border-none bg-gradient-to-r  from-purple-400 to-blue-400 text-white font-semibold text-lg shadow-xl"
+              onClick={() => navigator.vibrate(50)}
               suppressHydrationWarning
               disabled={loading}
             >
