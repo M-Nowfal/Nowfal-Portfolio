@@ -31,7 +31,7 @@ const About: React.FC = () => {
                     Professional Summary
                   </h3>
                   <p className="text-lg leading-relaxed">
-                    Hello! I'm <span className="font-semibold text-blue-300">Muhammed Nowfal</span>,
+                    Hello! I&apos;m <span className="font-semibold text-blue-300">Muhammed Nowfal</span>,
                     a passionate Computer Science student pursuing my B.Sc. at Government Arts College, Coimbatore.
                     I specialize in building modern web applications and solving complex problems through code.
                   </p>
@@ -131,8 +131,8 @@ const About: React.FC = () => {
                     Current Focus
                   </h3>
                   <p className="leading-relaxed">
-                    I'm currently enhancing my skills in full-stack development while working towards building
-                    a complete e-commerce solution. When I'm not coding, I enjoy exploring tech trends,
+                    I&apos;m currently enhancing my skills in full-stack development while working towards building
+                    a complete e-commerce solution. When I&apos;m not coding, I enjoy exploring tech trends,
                     collaborating with peers, and continuously expanding my knowledge in this ever-evolving field.
                   </p>
                 </div>

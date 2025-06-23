@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Skills = () => {
   // Organized skills by category
