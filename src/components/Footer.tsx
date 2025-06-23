@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="footer footer-horizontal footer-center bg-base-100 text-base-content rounded p-10">
+    <footer className="footer footer-horizontal footer-center bg-gradient-to-tr from-blue-500/20 to-purple-500/20 text-base-content rounded p-10">
       <h2 className="text-2xl font-bold">Connect with me</h2>
       <p>I&apos;m open to freelance projects, collaborations, and tech discussions.</p>
       <nav>

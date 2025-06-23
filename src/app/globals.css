@@ -9,4 +9,8 @@ html {
 html,
 body {
   overflow-x: hidden;
+  background-image: linear-gradient(to bottom right,
+      rgba(119, 171, 255, 0.050),
+      rgba(82, 54, 107, 0.050)
+    );
 }

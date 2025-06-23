@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
             height={1000}
             priority
             src="/portfolio_images/Nowfal.png"
-            className="max-w-xs sm:max-w-sm rounded-full object-cover object-top shadow-2xl md:h-100 md:w-100 hover:shadow-lg hover:shadow-blue-400 transition-all duration-200"
+            className="max-w-xs sm:max-w-sm rounded-full object-cover object-top shadow-2xl md:h-100 md:w-100 hover:shadow-lg hover:shadow-purple-400/20 transition-all duration-200"
             alt="Nowfal Portfolio"
           />
         </motion.div>
@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
             </h2>
           </div>
           <motion.button
-            className="btn bg-blue-500 text-white font-semibold md:font-bold text-lg py-5 btn-sm md:btn-md"
+            className="btn bg-gradient-to-r  from-purple-400 to-blue-400 text-white font-semibold md:font-bold text-lg py-5 btn-sm md:btn-md"
             onClick={() => {
               window.open("resume/Nowfal Resume.pdf", "_blank");
             }}

@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center py-10 bg-base-300" id="contact">
+    <div className="flex flex-col items-center py-10" id="contact">
       <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-purple-600 py-10 mb-5 text-center" data-aos="fade-right">
         Get in touch
       </h1>
@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
             type="text"
             name="name"
             placeholder="Name"
-            className="border border-gray-500 rounded-box p-2"
+            className="border border-t-blue-400 border-b-purple-400 border-r-purple-400 border-l-blue-400 rounded-box p-2"
             value={inputs.name}
             onChange={handleInputs}
             required
@@ -91,7 +91,7 @@ const Contact: React.FC = () => {
             type="text"
             name="email"
             placeholder="E-Mail"
-            className="border border-gray-500 rounded-box p-2"
+            className="border rounded-box p-2 border-t-blue-400 border-b-purple-400 border-r-purple-400 border-l-blue-400"
             value={inputs.email}
             onChange={handleInputs}
             required
@@ -101,7 +101,7 @@ const Contact: React.FC = () => {
           <textarea
             name="msg"
             placeholder="Message"
-            className="border border-gray-500 rounded-box h-20 p-2"
+            className="border rounded-box h-20 p-2 border-t-blue-400 border-b-purple-400 border-r-purple-400 border-l-blue-400"
             value={inputs.msg}
             onChange={handleInputs}
             required
@@ -109,7 +109,7 @@ const Contact: React.FC = () => {
           />
           <div className="flex flex-col items-center my-3">
             <button
-              className="btn bg-blue-500 text-white font-semibold text-lg shadow-2xl"
+              className="btn border-none bg-gradient-to-r  from-purple-400 to-blue-400 text-white font-semibold text-lg shadow-xl"
               suppressHydrationWarning
               disabled={loading}
             >

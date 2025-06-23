@@ -31,22 +31,26 @@ const Header = ({ toggleShowMessages, messages, setMessages }: {
     }
   }, [admin, getMessages, regetMessage]);
 
-  const menuStyle: string = "font-semibold hover:ps-5 hover:text-blue-500 transition-all duration-300 my-1 py-1";
+  const menuStyle: string = "text-xl hover:ps-5 hover:text-blue-500 transition-all duration-300 my-1 py-1";
   const largeMenuStyle: string = "flex items-center gap-1 font-semibold p-2 rounded-xl hover:text-blue-500 transition-all duration-200 transform hover:-translate-y-2";
 
   const menus = [
-    { url: "#hero", icon: <Home size={15} />, name: "Home" },
-    { url: "#about-me", icon: <User size={15} />, name: "About" },
-    { url: "#skills", icon: <Code size={15} />, name: "Skills" },
-    { url: "#projects", icon: <FolderOpen size={15} />, name: "Projects" },
-    { url: "#contact", icon: <Contact size={15} />, name: "Contact" },
+    { url: "#hero", icon: <Home size={20} />, name: "Home" },
+    { url: "#about-me", icon: <User size={20} />, name: "About" },
+    { url: "#skills", icon: <Code size={20} />, name: "Skills" },
+    { url: "#projects", icon: <FolderOpen size={20} />, name: "Projects" },
+    { url: "#contact", icon: <Contact size={20} />, name: "Contact" },
   ];
 
+  function vibrate() {
+    navigator.vibrate(50);
+  }
+
   return (
-    <div className="navbar bg-base-100/70 shadow-md rounded-b-xl backdrop-blur-lg z-10 fixed" data-aos="fade-down">
+    <div className="navbar bg-gradient-to-br from-blue-500/10 to-purple-500/10 shadow-md rounded-b-xl backdrop-blur-lg z-10 fixed" data-aos="fade-down">
       <div className="navbar-start md:hidden">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle" suppressHydrationWarning>
+          <div tabIndex={0} role="button" className="btn border-0 bg-transparent btn-circle shadow-none" onClick={vibrate} suppressHydrationWarning>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -76,7 +80,7 @@ const Header = ({ toggleShowMessages, messages, setMessages }: {
       </div>
 
       <div className="navbar-center md:navbar-start">
-        <Link href="/" className="btn btn-ghost text-xl font-bold hover:text-blue-500">Nowfal</Link>
+        <Link href="/" className="text-2xl bg-gradient-to-r from-purple-400 to-blue-400 font-bold bg-clip-text text-transparent">Nowfal</Link>
       </div>
       <div className="hidden md:navbar-center absolute left-[50%] translate-x-[-50%]">
         <div className="flex gap-1">
@@ -90,7 +94,7 @@ const Header = ({ toggleShowMessages, messages, setMessages }: {
       </div>
 
       <div className="navbar-end">
-        <button className="btn btn-ghost btn-circle" suppressHydrationWarning>
+        <button className="btn border-0 bg-transparent btn-circle shadow-none" onClick={vibrate} suppressHydrationWarning>
           <label className="swap swap-rotate" htmlFor="theme-toggler">
             <input type="checkbox" checked={theme === "dark"} onChange={toggleTheme} id="theme-toggler" />
             <svg
@@ -110,8 +114,11 @@ const Header = ({ toggleShowMessages, messages, setMessages }: {
           </label>
         </button>
 
-        {admin && <button className="btn btn-ghost btn-circle"
-          onClick={() => toggleShowMessages()}
+        {admin && <button className="btn border-0 bg-transparent btn-circle shadow-none"
+          onClick={() => {
+            toggleShowMessages();
+            vibrate();
+          }}
           suppressHydrationWarning
         >
           <div className="indicator">
