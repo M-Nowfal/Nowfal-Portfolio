@@ -52,7 +52,7 @@
 //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 //           {filterProjects.map((project, idx) => (
 //             <div key={project.title} data-aos={idx < 3 || idx > 5 ? "fade-right" : "fade-left"}>
-//               <div className="group bg-gradient-to-br from-blue-500/10 to-purple-500/10 relative backdrop-blur-md rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 h-96">
+//               <div className="group bg-gradient-to-br from-blue-500/10 to-purple-500/10 relative backdrop-blur-md rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 h-102 md:h-96">
 //                 <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 ${expandedProject === project.title && "opacity-100"} transition-opacity duration-500`}></div>
 
 //                 <div className="h-full flex flex-col">
