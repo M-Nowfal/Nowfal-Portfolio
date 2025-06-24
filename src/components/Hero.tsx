@@ -14,11 +14,13 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           whileTap={{ scale: 0.9 }}
           whileHover={{ scale: 1.05 }}
+          role="button"
+          onClick={() => navigator.vibrate(50)}
         >
           <Image
             width={1000}
             height={1000}
-            priority
+            priority={true}
             src="/portfolio_images/Nowfal.png"
             className="max-w-xs sm:max-w-sm rounded-full object-cover object-top shadow-2xl md:h-100 md:w-100 hover:shadow-lg hover:shadow-purple-400/20 transition-all duration-200"
             alt="Nowfal Portfolio"

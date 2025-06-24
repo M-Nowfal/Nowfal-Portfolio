@@ -79,7 +79,7 @@ const Header = ({ toggleShowMessages, messages, setMessages }: {
         </div>
       </div>
 
-      <div className="navbar-center md:navbar-start">
+      <div className="navbar-center md:navbar-start" role="button" onClick={() => navigator.vibrate(50)}>
         <Link href="/" className="text-2xl bg-gradient-to-r from-purple-400 to-blue-400 font-bold bg-clip-text text-transparent">Nowfal</Link>
       </div>
       <div className="hidden md:navbar-center absolute left-[50%] translate-x-[-50%]">

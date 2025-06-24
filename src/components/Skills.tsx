@@ -83,6 +83,7 @@ const Skills = () => {
                           src={skill.img}
                           width={500}
                           height={500}
+                          priority={false}
                           alt={skill.name}
                           className="object-contain"
                         />
@@ -109,25 +110,26 @@ const Skills = () => {
           className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto"
         >
           {familiarWithSkills.map((skill) => (
-            <div
-              key={skill.name}
-              className="px-6 py-3 bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-full shadow hover:scale-105 hover:bg-white/10 transition-all duration-300"
-              data-aos="fade-up"
-              role="button"
-              onClick={() => navigator.vibrate(50)}
-            >
-              <Link href={skill.url} target="_blank" className="flex items-center gap-2">
-                <div className="relative w-6 h-6">
-                  <Image
-                    src={skill.img}
-                    width={300}
-                    height={300}
-                    alt={skill.name}
-                    className="object-contain"
-                  />
-                </div>
-                <span className="font-medium">{skill.name}</span>
-              </Link>
+            <div key={skill.name} data-aos="fade-up">
+              <div
+                className="px-6 py-3 bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-full shadow hover:scale-105 hover:bg-white/10 transition-all duration-300"
+                role="button"
+                onClick={() => navigator.vibrate(50)}
+              >
+                <Link href={skill.url} target="_blank" className="flex items-center gap-2 ">
+                  <div className="relative w-6 h-6">
+                    <Image
+                      src={skill.img}
+                      width={300}
+                      height={300}
+                      priority={false}
+                      alt={skill.name}
+                      className="object-contain"
+                    />
+                  </div>
+                  <span className="font-medium">{skill.name}</span>
+                </Link>
+              </div>
             </div>
           ))}
         </div>

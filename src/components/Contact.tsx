@@ -4,6 +4,7 @@ import axios, { AxiosError } from 'axios';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import React, { useContext, useEffect, useState } from 'react'
 import { AdminContext, AuthContext } from './Layout';
+import { motion } from "framer-motion";
 
 const Contact: React.FC = () => {
 
@@ -108,14 +109,16 @@ const Contact: React.FC = () => {
             suppressHydrationWarning
           />
           <div className="flex flex-col items-center my-3">
-            <button
+            <motion.button
               className="btn border-none bg-gradient-to-r  from-purple-400 to-blue-400 text-white font-semibold text-lg shadow-xl"
               onClick={() => navigator.vibrate(50)}
               suppressHydrationWarning
+              whileHover={{ scale: 1.10 }}
+              whileTap={{ scale: 0.90 }}
               disabled={loading}
             >
               {loading ? "Submitting..." : "Submit"}
-            </button>
+            </motion.button>
             <span className={`${result.success ? "text-green-600" : "text-red-600"} text-lg mt-5`}>{result.msg}</span>
           </div>
         </form>
