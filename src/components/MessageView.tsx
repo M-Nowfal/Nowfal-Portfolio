@@ -2,6 +2,7 @@ import { MessageType } from '@/utils/Types';
 import axios, { AxiosError } from 'axios';
 import { Send, X } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
 
 const MessageView = ({ messages, toggleShowMessages, setMessages }: {
   messages: Array<MessageType>,
@@ -68,7 +69,7 @@ const MessageView = ({ messages, toggleShowMessages, setMessages }: {
       role="button"
     >
       <div className="bg-base-300 rounded-lg shadow-2xl w-[95%] max-w-2xl max-h-[80vh] flex flex-col" data-aos="fade-down">
-        <div className="p-4 border-b border-gray-200 bg-blue-600 rounded-t-lg flex items-center">
+        <div className="p-4 border-b border-gray-200 bg-gradient-to-r from-purple-400/70 to-blue-400/70 rounded-t-lg flex items-center">
           <div className="me-auto">
             <h2 className="text-2xl font-bold text-white">Messages</h2>
           </div>
@@ -87,7 +88,7 @@ const MessageView = ({ messages, toggleShowMessages, setMessages }: {
               {messages.map(message => (
                 <div
                   key={message._id}
-                  className="p-4 shadow-2xl rounded-lg bg-base-100 hover:bg-base-200 transition-colors"
+                  className="p-4 shadow-2xl rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:bg-base-200 transition-colors"
                 >
                   <span className="font-semibold text-gray-500">{message.createdAt.substring(0, 10)}</span>
                   <div className="flex justify-between items-start">
@@ -104,38 +105,46 @@ const MessageView = ({ messages, toggleShowMessages, setMessages }: {
                       onChange={(e) => setReplyMessage(e.target.value)}
                     />
                     <div className="flex gap-3">
-                      <button
-                        className="btn bg-green-600 text-white btn-sm shadow-md hover:bg-green-700"
+                      <motion.button
+                        className="btn bg-gradient-to-r from-purple-400 to-blue-400 text-white btn-sm shadow-md"
                         onClick={() => handleMessageSend(message)}
                         disabled={message._id === loading}
-                      ><Send size={15}/>{message._id === loading ? "Sending..." : "Send"}</button>
-                      <button
-                        className="btn bg-red-400 text-white btn-sm shadow-md hover:bg-red-500"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.90 }}
+                      ><Send size={15} />{message._id === loading ? "Sending..." : "Send"}</motion.button>
+                      <motion.button
+                        className="btn bg-gradient-to-r from-red-400 to-orange-400 text-white btn-sm shadow-md"
                         onClick={() => {
                           setIsReplying("");
                           setReplyMessage("");
                         }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.90 }}
                         disabled={message._id === loading}
-                      >Cancel</button>
+                      >Cancel</motion.button>
                     </div>
                   </div>}
                   {replySent.msgId === message._id && (
                     <span className={`pt-50 ${replySent.success ? "text-green-500" : "text-red-600"}`}>{replySent.res}</span>
                   )}
                   {isReplying !== message._id && <div className="flex justify-end mt-2">
-                    <button
-                      className="btn bg-red-400 btn-sm mx-1 text-white hover:bg-red-500"
+                    <motion.button
+                      className="btn bg-gradient-to-r from-red-400 to-orange-400 btn-sm mx-1 text-white"
                       onClick={() => handleMessageDelete(message._id)}
                       disabled={message._id == loading}
-                    >Delete</button>
-                    <button
-                      className="btn bg-blue-500 btn-sm mx-1 text-white hover:bg-blue-600"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.90 }}
+                    >Delete</motion.button>
+                    <motion.button
+                      className="btn bg-gradient-to-r from-blue-400 to-purple-400 btn-sm mx-1 text-white"
                       onClick={() => {
                         setIsReplying(message._id);
                         setReplyMessage("");
                       }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.90 }}
                       disabled={message._id == loading}
-                    >Reply</button>
+                    >Reply</motion.button>
                   </div>}
                 </div>
               ))}
