@@ -53,7 +53,7 @@ const Projects: React.FC = () => {
         ))}
       </div>
 
-      <div className="w-full px-4 sm:px-6  2xl:px-70">
+      <div className="w-full px-4 sm:px-6  2xl:px-50">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {filterProjects.map((project, idx) => (
             <div key={project.title} data-aos={idx < 3 || idx > 5 ? "fade-right" : "fade-left"}>
