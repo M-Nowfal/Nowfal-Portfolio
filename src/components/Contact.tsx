@@ -56,12 +56,12 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center py-10" id="contact">
-      <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-purple-600 py-10 mb-5 text-center" data-aos="fade-right">
+    <section className="flex flex-col items-center py-10" id="contact">
+      <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-purple-600 py-10 mb-5 text-center" data-aos="fade-up">
         Get in touch
       </h1>
       <div className="flex flex-col lg:flex-row gap-15 lg:gap-30 justify-center">
-        <div className="flex flex-col gap-4 items-center font-bold lg:pt-15" data-aos="fade-right">
+        <div className="flex flex-col gap-4 items-center font-bold lg:pt-15" data-aos="fade-up">
           <div className="flex gap-3">
             <MapPin className="text-blue-500/60" />
             Coimbatore
@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        <form className="flex flex-col gap-5 w-100" onSubmit={handleSubmit} data-aos="fade-left">
+        <form className="flex flex-col gap-5 w-100" onSubmit={handleSubmit} data-aos="fade-up">
           <input
             type="text"
             name="name"
@@ -123,7 +123,7 @@ const Contact: React.FC = () => {
           </div>
         </form>
       </div>
-    </div>
+    </section>
   );
 }
 

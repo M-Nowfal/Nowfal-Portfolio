@@ -4,10 +4,11 @@ import Image from "next/image";
 import React from "react";
 import Typewriter from 'typewriter-effect';
 import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
-    <div className="hero pt-20" id="hero">
+    <section className="hero pt-20 min-h-screen lg:pt-15" id="hero">
       <div className="hero-content gap-20 flex-col lg:flex-row-reverse">
         <motion.div
           initial={{ opacity: 0, x: 50 }}
@@ -50,7 +51,7 @@ const Hero: React.FC = () => {
             </h2>
           </div>
           <motion.button
-            className="btn bg-gradient-to-r  from-purple-400 to-blue-400 text-white font-semibold md:font-bold text-lg py-5 btn-sm md:btn-md"
+            className="btn bg-gradient-to-r  from-purple-400 to-blue-400 text-white font-semibold md:font-bold text-lg py-5 btn-sm md:btn-md border-0"
             onClick={() => {
               navigator.vibrate(50);
               window.open("resume/Nowfal Resume.pdf", "_blank");
@@ -63,8 +64,13 @@ const Hero: React.FC = () => {
           >Resume
           </motion.button>
         </motion.div>
+        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="md:absolute bottom-5 animate-bounce">
+          <button className="bg-gradient-to-r from-purple-400 to-blue-400 cursor-pointer rounded-full animate-pulse" onClick={() => {
+            location.href = "#about-me";
+          }}><ChevronDown className="p-1 size-10 lg:size-13 text-white" /></button>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
 

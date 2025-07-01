@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Layout from "@/components/Layout";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -21,6 +21,11 @@ export const metadata: Metadata = {
     { rel: "icon", url: "/portfolio_images/portofolio.png", sizes: "32x32" },
     { rel: "apple-touch-icon", url: "/portfolio_images/portofolio.png", sizes: "180x180" }
   ],
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1.0,
 };
 
 export default function RootLayout({

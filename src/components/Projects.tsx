@@ -26,14 +26,14 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center py-10" id="projects">
-      <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-purple-600 py-10 mb-5 text-center" data-aos="fade-down">
+    <section className="flex flex-col items-center py-10" id="projects">
+      <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-purple-600 py-10 mb-5 text-center" data-aos="fade-up">
         My Projects
       </h1>
 
       <div className="flex flex-wrap justify-center gap-3 mb-10 px-4">
         {["All", "Advanced", "Intermediate", "Basic"].map((cat, idx) => (
-          <div key={cat} data-aos={idx < 2 ? "fade-right" : "fade-left"}>
+          <div key={cat} data-aos="fade-up">
             <motion.button
               onClick={() => {
                 setCategory(cat);
@@ -56,7 +56,7 @@ const Projects: React.FC = () => {
       <div className="w-full px-4 sm:px-6  2xl:px-50">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {filterProjects.map((project, idx) => (
-            <div key={project.title} data-aos={idx < 3 || idx > 5 ? "fade-right" : "fade-left"}>
+            <div key={project.title} data-aos="fade-up">
               <div className="group bg-gradient-to-br from-blue-500/10 to-purple-500/10 relative backdrop-blur-md rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 h-96 md:h-85">
                 <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 ${expandedProject === project.title && "opacity-100"} transition-opacity duration-500`}></div>
 
@@ -86,7 +86,7 @@ const Projects: React.FC = () => {
                       <div
                         className="mb-4 flex-grow max-h-32 pr-2"
                       >
-                        <p className={`${expandedProject !== project.title && 'line-clamp-4'}`}>
+                        <p className={`${expandedProject !== project.title && 'line-clamp-4'} text-sm font-semibold`}>
                           {project.description}
                         </p>
                       </div>
@@ -119,7 +119,7 @@ const Projects: React.FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
