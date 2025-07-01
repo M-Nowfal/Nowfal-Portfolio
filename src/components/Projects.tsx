@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
       </h1>
 
       <div className="flex flex-wrap justify-center gap-3 mb-10 px-4">
-        {["All", "Advanced", "Intermediate", "Basic"].map((cat, idx) => (
+        {["All", "Advanced", "Intermediate", "Basic"].map((cat) => (
           <div key={cat} data-aos="fade-up">
             <motion.button
               onClick={() => {
@@ -55,7 +55,7 @@ const Projects: React.FC = () => {
 
       <div className="w-full px-4 sm:px-6  2xl:px-50">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-          {filterProjects.map((project, idx) => (
+          {filterProjects.map((project) => (
             <div key={project.title} data-aos="fade-up">
               <div className="group bg-gradient-to-br from-blue-500/10 to-purple-500/10 relative backdrop-blur-md rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 h-96 md:h-85">
                 <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 ${expandedProject === project.title && "opacity-100"} transition-opacity duration-500`}></div>
