@@ -8,8 +8,8 @@ import { ChevronDown } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="hero pt-20 min-h-screen lg:pt-15" id="hero">
-      <div className="hero-content gap-20 flex-col lg:flex-row-reverse">
+    <section className="hero pt-20 min-h-screen lg:pt-15 bg-gradient-to-r from-blue-600/20 to-purple-600/20" id="hero">
+      <div className="hero-content gap-20 flex-col lg:flex-row-reverse md:pb-20">
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
         <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="md:absolute bottom-5 animate-bounce">
           <button className="bg-gradient-to-r from-purple-400 to-blue-400 cursor-pointer rounded-full animate-pulse" onClick={() => {
             location.href = "#about-me";
-          }}><ChevronDown className="p-1 size-10 lg:size-13 text-white" /></button>
+          }} suppressHydrationWarning><ChevronDown className="p-1 size-10 lg:size-13 text-white" /></button>
         </motion.div>
       </div>
     </section>
